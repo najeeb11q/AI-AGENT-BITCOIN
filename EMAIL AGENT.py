@@ -20,8 +20,8 @@ TABLE_ONE = os.getenv("TABLE_ONE")  # bitcoin_prices
 TABLE_TWO = os.getenv("TABLE_TWO")  # econews
 
 # Email configuration
-EMAIL_HOST = os.getenv("EMAIL_HOST")
-EMAIL_PORT = int(os.getenv("EMAIL_PORT"))
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=465
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL")
