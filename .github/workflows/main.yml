@@ -28,12 +28,12 @@ jobs:
         run: |
           # Create .env file from GitHub secrets
           echo "${{ secrets.ENV_FILE }}" > .env
-      
-      - name: Fetch Bitcoin prices
-        run: python BITCOIN PRICES.py
-      
+
       - name: Fetch news from Brave API
         run: python ECO NEWS.py
+        
+      - name: Fetch Bitcoin prices
+        run: python BITCOIN PRICES.py
       
       - name: Compile data and generate email
         run: python EMAIL AGENT.py
