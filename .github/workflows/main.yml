@@ -31,8 +31,8 @@ jobs:
       - name: Set up environment variables
         run: |
           # Create .env file from GitHub secrets
-          run: echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> $GITHUB_ENV
-          run: echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> $GITHUB_ENV
+          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> $GITHUB_ENV
+          echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> $GITHUB_ENV
           echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Fetch news from Brave API
