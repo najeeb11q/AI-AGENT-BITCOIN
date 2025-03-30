@@ -1,15 +1,5 @@
 
 
-
-# Debugging: Print all environment variables to see if they are loaded
-print("Environment variables:", os.environ)
-
-# Get the values of SUPABASE_URL and SUPABASE_KEY
-supabase_url = os.getenv("SUPABASE_URL")
-supabase_key = os.getenv("SUPABASE_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
-
 # Debugging: Print the values of SUPABASE_URL and SUPABASE_KEY
 print(f"Supabase URL: {supabase_url}")
 print(f"Supabase Key: {supabase_key}")
