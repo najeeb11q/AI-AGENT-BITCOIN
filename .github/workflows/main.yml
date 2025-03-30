@@ -9,6 +9,10 @@ on:
 jobs:
   run-agents:
     runs-on: ubuntu-latest
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
     
     steps:
       - name: Checkout repository
@@ -28,12 +32,7 @@ jobs:
            pip install requests
            pip install datetime
       
-      - name: Set up environment variables
-        run: |
-          # Create .env file from GitHub secrets
-          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> $GITHUB_ENV
-          echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> $GITHUB_ENV
-          echo "${{ secrets.ENV_FILE }}" > .env
+      
 
       - name: Fetch news from Brave API
         run: python ECO_NEWS.py
