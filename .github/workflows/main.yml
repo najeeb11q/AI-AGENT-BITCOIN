@@ -3,7 +3,7 @@ name: Run Data Agents Workflow
 on:
   schedule:
     # Run daily at 8 AM UTC
-    - cron: '* * * * *'
+    - cron: '0 8 * * *'
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
