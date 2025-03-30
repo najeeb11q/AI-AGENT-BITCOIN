@@ -1,9 +1,5 @@
 
-from dotenv import load_dotenv
-import os
 
-# Specify the full path to the .env file
-load_dotenv(dotenv_path="C:/Users/NAJEEB AHMED/PycharmProjects/open cv python/.env")
 
 # Debugging: Print all environment variables to see if they are loaded
 print("Environment variables:", os.environ)
